@@ -3,7 +3,10 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev",
-    "start": "next start"
+    "lint": "next lint",
+    "start": "next start",
+    "typecheck": "tsc -b .",
+    "format": "prettier --write \"./app/**/*.+(js|jsx|json|ts|tsx|js|jsx)\""
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
@@ -26,6 +29,9 @@
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.14",
     "dotenv": "^16.3.1",
+    "eslint": "8.52.0",
+    "eslint-config-next": "14.0.0",
+    "eslint-config-prettier": "^9.0.0",
     "prettier": "^3.0.3"
   },
   "engines": {
