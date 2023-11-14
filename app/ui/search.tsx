@@ -13,6 +13,8 @@ export default function Search({ placeholder }: { placeholder: string }) {
   const onChangeHandler = useDebouncedCallback(
     ({ target: { value: query } }: ChangeEvent<HTMLInputElement>) => {
       const searchParams = new URLSearchParams(params);
+      searchParams.set('page', '1');
+
       if (query) {
         searchParams.set('query', query);
       } else {
